@@ -91,6 +91,6 @@ Software empresarial opcional:
 Total aproximado: 2.500 - 10.000 €, dependiendo de si se eligen versiones
 empresariales del software o versiones de código abierto gratuitas.
 
+## Documentación en formato PDF
 
-
-[PDF](./Anteproyecto/Anteproyecto_TFG.pdf)
+[Link al archivo en PDF](./Anteproyecto_TFG.pdf)

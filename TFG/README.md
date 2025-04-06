@@ -111,3 +111,6 @@ Se realizarán pruebas unitarias y de integración:
 Este proyecto demuestra la viabilidad de automatizar el despliegue de servicios usando herramientas modernas de DevOps como Docker y Ansible. Además, muestra cómo una infraestructura sencilla puede escalarse y adaptarse a entornos reales. Proxmox ha permitido realizar pruebas sin coste adicional y simular un entorno empresarial realista.
 
 
+## Documentación en formato PDF
+
+[Link al archivo en PDF](./README.md)
