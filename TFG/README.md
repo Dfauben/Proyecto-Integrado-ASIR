@@ -1,5 +1,8 @@
 # DOCUMENTACIÓN PROYECTO INTEGRADO – ASIR
 
+ESTA DOCUMENTACIÓN SIGUE EN  DESARROLLO,  CONSIDERAR QUE ALGUNOS DE LOS 
+FORMATOS Y  CONTENIDOS  PUEDEN  VARIAR  CON  LA  VERSIÓN  FINAL PRESENTADA Y 
+QUE ESTA ES SIMPLEMENTE EL DESARROLLO DE LA IDEA PRINCIPAL. 
 
 ## 1. INTRODUCCIÓN
 Este proyecto tiene como objetivo el despliegue automatizado de aplicaciones en contenedores usando Docker y Ansible, simulando un entorno real mediante Proxmox. Se busca estandarizar, automatizar y facilitar la puesta en marcha de entornos que puedan escalarse fácilmente. Se utilizarán tecnologías ampliamente adoptadas en entornos DevOps con un enfoque empresarial.
@@ -113,4 +116,4 @@ Este proyecto demuestra la viabilidad de automatizar el despliegue de servicios 
 
 ## Documentación en formato PDF
 
-[Link al archivo en PDF](./README.md)
+[Link al archivo en PDF](./DFB_TFGV2.pdf)
