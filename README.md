@@ -1,3 +1,9 @@
+
+![](/img/_bannerD.png#gh-dark-mode-only)
+![](/img/_bannerL.png#gh-light-mode-only)
+
+---
+
 # Proyecto ASIR – Despliegue Automatizado con Docker y Ansible
 
 ## Documentos
