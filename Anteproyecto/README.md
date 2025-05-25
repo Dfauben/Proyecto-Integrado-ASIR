@@ -1,5 +1,9 @@
-# Proyecto-TFG
-Proyecto para el TFG del curso de Administración de Sistemas Informáticos en Red 
+> Pese a ser la primera idea del proyecto, tener en cuenta que la idea final puede cambiar con el tiempo. La idea de un proyecto puede cambiar con el tiempo, y es importante estar dispuesto a adaptarse a las nuevas circunstancias y necesidades.
+
+<br>
+
+# Anteproyecto - Proyecto Integrado
+Anteproyecto para el curso de Administración de Sistemas Informáticos en Red 
 
 ## Anteproyecto
 

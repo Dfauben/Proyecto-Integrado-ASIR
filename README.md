@@ -4,65 +4,49 @@
 
 ---
 
-# Proyecto ASIR – Despliegue Automatizado con Docker y Ansible
+# Proyecto ASIR - Hub Principal del Repositorio
 
-## Documentos
+Este repositorio es el punto central para la gestión y documentación del proyecto de Formación Profesional en Administración de Sistemas Informáticos en Red (ASIR) del IES La Marisma.
 
-- [Anteproyecto](./Anteproyecto/README.md)
-- [Documentación del TFG](./TFG/README.md)
+## Propósito
 
+Aquí se centraliza toda la documentación y recursos relacionados con el proyecto, incluyendo:
 
-## Descripción
+- La documentación del **Anteproyecto**, que contiene la propuesta inicial y planificación.
+- La documentación del **Proyecto Integrado**, que detalla la implementación y desarrollo del proyecto.
 
-Este proyecto tiene como objetivo demostrar la automatización y despliegue de servicios utilizando **Docker** y **Ansible** en un entorno simulado mediante **Proxmox**. El sistema permite gestionar aplicaciones de manera escalable, reproducible y segura, integrando herramientas modernas de DevOps como **Nginx**, **MySQL** y orquestación con **Docker Compose** o **Kubernetes**.
+## Navegación
 
-El trabajo ha sido desarrollado como parte del **Proyecto Integrado** del segundo curso del Ciclo Formativo de Grado Superior en **Administración de Sistemas Informáticos en Red (ASIR)** en el IES La Marisma.
+Para más información, consulte las carpetas y documentos específicos:
 
-## Tecnologías utilizadas
+- [Anteproyecto](./Anteproyecto/README.md) - Propuesta y planificación inicial.
+- [Proyecto Integrado](./Proyecto%20Integrado/README.md) - Documentación detallada del desarrollo.
 
-- **Docker**: Contenedorización de servicios.
-- **Docker Compose / Kubernetes**: Orquestación de contenedores.
-- **Ansible**: Automatización de configuración y despliegue.
-- **Nginx**: Proxy reverso para la gestión de tráfico y seguridad.
-- **MySQL**: Sistema de gestión de bases de datos relacional.
-- **Ubuntu Server 22.04**: Sistema operativo base.
-- **Proxmox VE**: Plataforma de virtualización para la simulación del entorno.
+### Documentos PDF
 
-## Estructura del proyecto
+A continuación se incluyen vistas previas interactivas de los documentos PDF principales. Si su plataforma no soporta la visualización directa, puede hacer clic en el título para abrir el documento completo.
 
-```bash
-proyecto-asir/
-├── ansible/
-│   ├── playbooks/
-│   └── inventory/
-├── docker/
-│   └── docker-compose.yml
-├── nginx/
-│   └── default.conf
-├── db/
-│   └── init.sql
-├── README.md
-└── documentacion/
-    └── Documentacion_Proyecto_Asir.md
-```
+<details>
+<summary>Anteproyecto (PDF)</summary>
 
-## Objetivos
+<iframe src="./Anteproyecto/Anteproyecto_PI.pdf" width="100%" height="600px" style="border:none;">
+Este visor no soporta la visualización directa del PDF. Por favor, haga clic <a href="./Anteproyecto/Anteproyecto_PI.pdf">aquí</a> para descargarlo.
+</iframe>
 
-- Implementar un sistema de despliegue automatizado en entorno Linux.
-- Utilizar Ansible para gestionar servidores y contenedores Docker.
-- Asegurar la escalabilidad y portabilidad del sistema.
-- Documentar el proceso de diseño, pruebas y despliegue de forma detallada.
+</details>
 
-## Requisitos
+<details>
+<summary>Documentación Proyecto Integrado (PDF)</summary>
 
-- Proxmox VE (para virtualización).
-- Máquina anfitriona con al menos 16 GB de RAM.
-- Conexión a internet para instalación de paquetes.
-- Conocimientos básicos de redes, sistemas operativos y administración de servicios.
+<iframe src="./Proyecto%20Integrado/DFB_TFGV2.pdf" width="100%" height="600px" style="border:none;">
+Este visor no soporta la visualización directa del PDF. Por favor, haga clic <a href="./Proyecto%20Integrado/DFB_TFGV2.pdf">aquí</a> para descargarlo.
+</iframe>
 
-## Licencia
+</details>
 
-Este proyecto utiliza software de código abierto. El uso comercial de herramientas como **Docker Business**, **MySQL Enterprise** o **Nginx Plus** puede requerir licencias adicionales si se utiliza en entornos productivos con fines de lucro.
+## Contexto
+
+Este proyecto forma parte del segundo curso del Ciclo Formativo de Grado Superior en Administración de Sistemas Informáticos en Red (ASIR) en el IES La Marisma.
 
 ## Autor
 
