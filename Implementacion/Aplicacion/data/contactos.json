@@ -1,0 +1,82 @@
+[
+    {
+        "id": "1",
+        "nombre": "Luis López",
+        "telefono": "+34 555 885 544",
+        "email": "LuisLpz88@yahoo.com",
+        "imagen": null,
+        "password": "1234"
+    },
+    {
+        "id": "2",
+        "nombre": "Maite Gómez",
+        "telefono": "+1 555 875 454",
+        "email": "maitegmz@gmail.com",
+        "imagen": "foto1.jpeg",
+        "password": "Sanpitopato33"
+    },
+    {
+        "id": "3",
+        "nombre": "Nazaré Macilla",
+        "telefono": "+44 555 345 500",
+        "email": "Nz5macilla@gmail.com",
+        "imagen": "foto2.jpeg",
+        "password": "toby112"
+    },
+    {
+        "id": "4",
+        "nombre": "José Luis Pardo",
+        "telefono": "+49 555 629 614",
+        "email": "pard77j4se@outlook.com",
+        "imagen": "foto4.jpeg",
+        "password": "23gee45"
+    },
+    {
+        "id": "5",
+        "nombre": "Ana Martínez",
+        "telefono": "+33 555 345 678",
+        "email": "ana.martinez@example.com",
+        "imagen": "foto5.jpeg",
+        "password": "passAna5"
+    },
+    {
+        "id": "6",
+        "nombre": "Carlos Fernández",
+        "telefono": "+55 555 456 789",
+        "email": "carlos.fernandez@example.com",
+        "imagen": "foto6.jpeg",
+        "password": "passCar6"
+    },
+    {
+        "id": "7",
+        "nombre": "Elena Ruiz",
+        "telefono": "+81 555 567 890",
+        "email": "elena.ruiz@example.com",
+        "imagen": "foto7.jpeg",
+        "password": "passEle7"
+    },
+    {
+        "id": "8",
+        "nombre": "Miguel Torres",
+        "telefono": "+61 555 678 901",
+        "email": "miguel.torres@example.com",
+        "imagen": "foto8.jpeg",
+        "password": "passMig8"
+    },
+    {
+        "id": "9",
+        "nombre": "Sofía Navarro",
+        "telefono": "+91 555 789 012",
+        "email": "sofia.navarro@example.com",
+        "imagen": "foto9.jpeg",
+        "password": "passSof9"
+    },
+    {
+        "id": "10",
+        "nombre": "Javier Gómez",
+        "telefono": "+7 555 890 123",
+        "email": "javier.gomez@example.com",
+        "imagen": "foto10.jpeg",
+        "password": "passJav10"
+    }
+]

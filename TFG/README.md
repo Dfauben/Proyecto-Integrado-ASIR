@@ -1,120 +1,119 @@
 # DOCUMENTACIÓN PROYECTO INTEGRADO – ASIR
 
-<br>
-ESTA DOCUMENTACIÓN SIGUE EN  DESARROLLO,  CONSIDERAR QUE ALGUNOS DE LOS 
-FORMATOS Y  CONTENIDOS  PUEDEN  VARIAR  CON  LA  VERSIÓN  FINAL PRESENTADA Y 
-QUE ESTA ES SIMPLEMENTE EL DESARROLLO DE LA IDEA PRINCIPAL. 
-<br>
+> ⚠️ ESTA DOCUMENTACIÓN ESTÁ EN DESARROLLO. ALGUNOS FORMATOS Y CONTENIDOS PUEDEN VARIAR EN LA VERSIÓN FINAL.
 
 ## 1. INTRODUCCIÓN
-Este proyecto tiene como objetivo el despliegue automatizado de aplicaciones en contenedores usando Docker y Ansible, simulando un entorno real mediante Proxmox. Se busca estandarizar, automatizar y facilitar la puesta en marcha de entornos que puedan escalarse fácilmente. Se utilizarán tecnologías ampliamente adoptadas en entornos DevOps con un enfoque empresarial.
 
+Este proyecto tiene como objetivo demostrar la implementación de un sistema CI/CD (Integración y Despliegue Continuo) usando **GitHub Actions**, **Ansible**, **Docker** y **Kubernetes**. En lugar de centrarse en el desarrollo de una aplicación concreta, se pone el foco en automatizar su ciclo de vida completo: desde el control de versiones hasta su despliegue en clientes remotos, simulando un entorno profesional.
 
 ## 2. PLANIFICACIÓN
-• Inicio: Abril 2025
-• Fin estimado: Junio 2025
-• Duración total: 4 meses
-• Fases:
- - Revisión de requisitos
- - Preparación del entorno
- - Desarrollo de los playbooks de Ansible
- - Creación y prueba de contenedores Docker
- - Configuración de Nginx como proxy reverso
- - Validación y pruebas
- - Redacción y presentación
 
+- **Inicio**: Abril 2025  
+- **Fin estimado**: Junio 2025  
+- **Duración total**: 4 meses  
+
+### Fases:
+- Análisis de requisitos
+- Preparación de la infraestructura CI/CD
+- Desarrollo del pipeline GitHub Actions
+- Automatización del despliegue con Ansible
+- Contenerización con Docker
+- Orquestación con Kubernetes
+- Validación funcional
+- Redacción de la documentación
 
 ## 3. ANÁLISIS
-El sistema sustituye despliegues manuales y no homogéneos por una arquitectura automatizada. Los usuarios actuales (administradores de sistemas) se enfrentan a tareas repetitivas y propensas a errores. El nuevo sistema automatiza todo esto, permitiendo rapidez, estandarización y escalabilidad.
 
+Se parte de una arquitectura sin automatización, donde los despliegues son manuales. Esto implica riesgos de inconsistencia, errores humanos y dificultad para escalar. El proyecto propone una solución automatizada y trazable usando prácticas DevOps.
 
-Requisitos funcionales:
-- Despliegue de servicios web (por ejemplo, una app PHP)
-- Base de datos relacional (MySQL)
-- Proxy reverso con Nginx
-- Gestión de servicios con contenedores Docker
-- Automatización con Ansible
+### Requisitos funcionales:
 
+- Despliegue automático de aplicación PHP (agenda de contactos con JSON)
+- Orquestación con Kubernetes en clientes Ubuntu
+- Automatización del entorno y servicios con Ansible
+- Pipeline de CI/CD completo con GitHub Actions
 
-Requisitos no funcionales:
-- Escalabilidad
-- Trazabilidad mediante control de versiones (Git)
-- Modularidad y reutilización de roles y playbooks
-- Seguridad de acceso y configuración
+### Requisitos no funcionales:
 
+- Escalabilidad en clientes
+- Modularidad del código y despliegues
 
 ## 4. DISEÑO
-Infraestructura:
-- 1 servidor Proxmox (virtualización)
-- VM 1: Servidor principal (Ansible Master + Docker Host)
-- VM 2: Cliente 1 (simulación de acceso a servicios)
-- VM 3: Cliente 2 (opcional para pruebas)
 
+### Infraestructura:
 
-Tecnologías:
-- Ubuntu Server 22.04
-- Docker + Docker Compose
+- Repositorio GitHub centralizado
+- Servidor Ubuntu CI/CD (Ansible + SSH)
+- Cliente(s) Ubuntu con Kubernetes (minikube)
+- Despliegue remoto de contenedores Docker
+
+### Tecnologías:
+
+- GitHub Actions
 - Ansible
-- Nginx como proxy reverso
-- MySQL como motor de base de datos
+- Docker
+- Kubernetes (minikube)
+- Ubuntu Server 22.04
+- PHP + JSON
 
+### Arquitectura lógica:
 
-Arquitectura lógica:
-Nginx → App (contenedor) ↔ MySQL (contenedor)
-Todos gestionados por Docker, configurados con Ansible.
-
+```plaintext
+GitHub (PR) 
+  ↓
+Servidor CI/CD (GitHub Actions → Ansible)
+  ↓
+Cliente Ubuntu (Kubernetes) 
+  → Contenedor App PHP (JSON)
+```
 
 ## 5. IMPLEMENTACIÓN
-Paso 1: Preparación del entorno
-- Instalación de Proxmox y creación de VMs
-- Instalación de Ubuntu Server 22.04
 
+### Paso 1: Preparación del entorno
 
-Paso 2: Instalación de dependencias
-- Instalación de Docker y Docker Compose
-- Instalación de Ansible
-- Inicialización de repositorio Git
+- Configuración del repositorio GitHub y Secrets
+- Instalación de Ansible y Docker en el servidor CI/CD
+- Acceso SSH entre CI/CD y clientes
 
+### Paso 2: Contenerización de la aplicación PHP
 
-Paso 3: Desarrollo de Playbooks
-- Playbooks para instalación de dependencias
-- Playbooks para despliegue de servicios (Nginx, MySQL, app PHP)
+- Dockerfile personalizado
+- Configuración de volúmenes para JSON
+- Testeo local de la imagen
 
+### Paso 3: Definición de recursos Kubernetes
 
-Paso 4: Configuración de contenedores
-- Dockerfiles personalizados
-- docker-compose.yml para orquestación local
+- deployment.yml para la app
+- service.yml para exposición por NodePort
 
+### Paso 4: Automatización con Ansible
 
-Paso 5: Configuración de Nginx
-- Hosts virtuales
-- Redirección de tráfico y SSL si procede
+- Inventario de clientes
+- Playbooks para instalación de Docker y Kubernetes (si no existe)
+- Aplicación de manifiestos con kubectl
 
+### Paso 5: Configuración de CI/CD
 
-Paso 6: Pruebas y validación
-- Conexión entre contenedores
-- Acceso desde clientes
-- Comprobación de reinicio automático y persistencia
-
+- deploy.yml en .github/workflows
+- GitHub Actions que ejecuta Ansible tras pull request a main
 
 ## 6. PRUEBAS
-Se realizarán pruebas unitarias y de integración:
-- Verificar acceso a la app desde los clientes
-- Comprobación de disponibilidad de MySQL
-- Fallos simulados para validar autorecuperación
-- Comprobación de reglas de seguridad (puertos abiertos, firewall)
 
+- Acceso a la aplicación desde navegador externo (cliente)
+- Validación del funcionamiento del contenedor PHP
+- Comprobación de logs y errores
+- Simulación de fallos (borrado de pod, reinicio cliente)
 
 ## 7. DOCUMENTACIÓN TÉCNICA
-- Manual de instalación de dependencias
-- Manual de uso de playbooks
-- Manual de gestión de contenedores y acceso a logs
-- Diagrama de red y servicios
 
+- Manual de instalación del entorno
+- Manual de uso de Ansible para despliegue
+- Ejemplo de flujo CI/CD con capturas
+- Diagrama de red y arquitectura
 
 ## 8. CONCLUSIONES
-Este proyecto demuestra la viabilidad de automatizar el despliegue de servicios usando herramientas modernas de DevOps como Docker y Ansible. Además, muestra cómo una infraestructura sencilla puede escalarse y adaptarse a entornos reales. Proxmox ha permitido realizar pruebas sin coste adicional y simular un entorno empresarial realista.
 
+Este proyecto demuestra que es posible construir un entorno CI/CD funcional y profesional con herramientas open source. Se ha automatizado por completo el ciclo de vida de una aplicación PHP, desde su integración hasta el despliegue remoto en clientes gestionados con Kubernetes. Esta solución es fácilmente escalable y aplicable a escenarios reales.
 
 ## Documentación en formato PDF
 

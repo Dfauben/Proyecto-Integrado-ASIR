@@ -1,0 +1,32 @@
+Cambios realizados en el proyecto de gestión de contactos:
+
+1. funciones.php
+- Mejorada la gestión de errores en la lectura y escritura del archivo JSON.
+- Generación de contraseñas más segura usando random_int.
+- Validación y manejo de errores en la subida de imágenes.
+- Mejor organización y comentarios en el código.
+
+2. vistas/agregar.php
+- Validación y saneamiento de entradas (nombre, teléfono, email).
+- Uso de la función generarId para IDs consistentes.
+- Manejo de errores en la subida de imágenes.
+- Respuestas en formato JSON para compatibilidad AJAX.
+
+3. vistas/editar_contacto.php
+- Validación y saneamiento de entradas.
+- Preservación del ID y contraseña existentes.
+- Manejo seguro de la subida y reemplazo de imágenes.
+- Respuestas en formato JSON con códigos HTTP adecuados.
+
+4. vistas/eliminar.php
+- Validación y saneamiento del ID recibido.
+- Manejo de errores en la eliminación y guardado de contactos.
+- Limpieza de imágenes no utilizadas en la carpeta uploads.
+- Respuestas en formato JSON con códigos HTTP adecuados.
+
+5. vistas/obtener_contacto.php
+- Validación y saneamiento del ID recibido.
+- Respuestas JSON consistentes para éxito y error.
+- Uso de códigos HTTP para indicar estado de la respuesta.
+
+Estos cambios mejoran la seguridad, robustez, mantenibilidad y experiencia de usuario del sistema.
