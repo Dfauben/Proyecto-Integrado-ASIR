@@ -6,6 +6,12 @@
 
 Este proyecto tiene como objetivo demostrar la implementación de un sistema CI/CD (Integración y Despliegue Continuo) usando **GitHub Actions**, **Ansible**, **Docker** y **Kubernetes**. En lugar de centrarse en el desarrollo de una aplicación concreta, se pone el foco en automatizar su ciclo de vida completo: desde el control de versiones hasta su despliegue en clientes remotos, simulando un entorno profesional.
 
+Podrá encontrar la documentación sobre la apliación en el siguiente enlace: 
+
+- [Documentación Aplicación PHP](https://github.com/Dfauben/CI-CD-Simulacion-PHP)
+
+<br>
+
 El trabajo ha sido desarrollado como parte del **Proyecto Integrado** del segundo curso del Ciclo Formativo de Grado Superior en **Administración de Sistemas Informáticos en Red (ASIR)** en el IES La Marisma.
 
 ## 2. PLANIFICACIÓN
