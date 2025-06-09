@@ -1,7 +1,5 @@
 # DOCUMENTACIÓN PROYECTO INTEGRADO – ASIR
 
-> ⚠️ ESTA DOCUMENTACIÓN ESTÁ EN DESARROLLO. ALGUNOS FORMATOS Y CONTENIDOS PUEDEN VARIAR EN LA VERSIÓN FINAL.
-
 ## 1. INTRODUCCIÓN
 
 Este proyecto tiene como objetivo demostrar la implementación de un sistema CI/CD (Integración y Despliegue Continuo) usando **GitHub Actions**, **Ansible**, **Docker** y **Kubernetes**. En lugar de centrarse en el desarrollo de una aplicación concreta, se pone el foco en automatizar su ciclo de vida completo: desde el control de versiones hasta su despliegue en clientes remotos, simulando un entorno profesional.
