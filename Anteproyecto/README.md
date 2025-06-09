@@ -97,4 +97,4 @@ empresariales del software o versiones de código abierto gratuitas.
 
 ## Documentación en formato PDF
 
-[Link al archivo en PDF](./Anteproyecto_TFG.pdf)
+[Link al archivo en PDF](./Anteproyecto_PI.pdf)
