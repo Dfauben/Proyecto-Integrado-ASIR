@@ -126,3 +126,7 @@ Este proyecto demuestra que es posible construir un entorno CI/CD funcional y pr
 ## Documentación en formato PDF
 
 [Link al archivo en PDF](./Documentacion_Proyecto_Asir.pdf)
+
+## Anexos
+
+[Anexos](./Anexo/)
